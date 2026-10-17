@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="A local guide to Marinduque, Philippines: discover island attractions, heritage, Moriones, local food and responsible travel tips.">
+  <title>Marinduque — Island stories, lived traditions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Marinduque Island Guide home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MARINDUQUE<span class="brand-dot">.</span><small>ISLAND GUIDE</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#directory">Explore places</a>
+        <a href="#guide-items">Local guide</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#food">Island table</a>
+        <a href="#travel-well">Travel well</a>
+      </nav>
+      <a class="header-cta" href="#checklist">My island list <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 1100 530" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b9d4c4"/><stop offset="1" stop-color="#f2d2a4"/></linearGradient>
+            <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#4d9b91"/><stop offset="1" stop-color="#175e61"/></linearGradient>
+          </defs>
+          <rect width="1100" height="530" fill="url(#sky)"/>
+          <circle cx="820" cy="145" r="58" fill="#f6d38e" opacity=".88"/>
+          <path d="M0 294 155 227l115 63 171-151 143 149 145-72 105 85 113-57 153 86v58H0Z" fill="#557c66"/>
+          <path d="m343 286 98-147 143 149-101-76-49 36-38-30Z" fill="#d5c8a1" opacity=".84"/>
+          <path d="M0 336q130-42 252-12t244 7q130-26 252 4t352-4v199H0Z" fill="url(#sea)"/>
+          <path d="M0 376q149-26 288 0t294 1q158-27 282 3t236-2M0 439q156-25 291 2t286 1q171-25 295 3t228-3" fill="none" stroke="#c8e2c8" stroke-width="5" opacity=".45"/>
+          <path d="M-30 438q166-80 315-18 104 44 148 110H-30ZM1130 430q-140-65-261-17-95 38-150 117h411Z" fill="#e4c995"/>
+          <path d="M104 377q8-92 33-153m-34 94q-48-47-78-36m88-18q40-42 70-32m-74 57q-43-24-70-9m46 60q39-39 72-32" fill="none" stroke="#285c4c" stroke-width="12" stroke-linecap="round"/>
+          <path d="M934 375q-5-82-28-136m28 82q40-43 69-34m-76-14q-35-39-65-29m73 54q42-22 66-7m-43 54q-38-36-67-27" fill="none" stroke="#285c4c" stroke-width="11" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Mimaropa · Philippines</p>
+        <h1 id="hero-title">A small island.<br><em>A thousand stories.</em></h1>
+        <p class="hero-copy">Find the Marinduque that locals know: a welcoming island of coastal wonders, living traditions, and shared tables.</p>
+        <a class="button button-light" href="#directory">Explore the island <span aria-hidden="true">↓</span></a>
+        <p class="hero-note"><span aria-hidden="true">✳</span> Six municipalities · One warm welcome</p>
+      </div>
+      <div class="hero-stamp" aria-label="The heart of the Philippines"><span>THE HEART</span><strong>♡</strong><span>OF THE PHILIPPINES</span></div>
+      <span class="hero-caption">Sea, mountain, and island sky</span>
+    </section>
+
+    <section class="container directory section-pad" id="directory" aria-labelledby="directory-title">
+      <div class="section-heading">
+        <div><p class="eyebrow eyebrow-dark">Pick a path, find a place</p><h2 id="directory-title">The island, <em>your way.</em></h2></div>
+        <p class="section-lede">Browse from all six municipalities. Open a place for a little local context, then add it to your own island list.</p>
+      </div>
+      <div class="directory-controls">
+        <div class="filters" role="group" aria-label="Filter places by type">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All places</button>
+          <button class="filter-button" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+          <button class="filter-button" type="button" data-filter="coast" aria-pressed="false">Coast &amp; islands</button>
+          <button class="filter-button" type="button" data-filter="heritage" aria-pressed="false">Heritage</button>
+        </div>
+        <label class="search-box"><span class="visually-hidden">Search places or municipalities</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <input id="place-search" type="search" placeholder="Search places or towns">
+        </label>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="place-grid" id="place-grid" aria-label="Tourist attractions"></div>
+      <p class="empty-state" id="empty-state" hidden>No places found. Try a different name or category.</p>
+    </section>
+
+    <section class="guide-items-section" id="guide-items" aria-labelledby="guide-items-title">
+      <div class="container section-pad">
+        <div class="section-heading">
+          <div><p class="eyebrow eyebrow-dark">A little local knowledge</p><h2 id="guide-items-title">Island guide <em>notes.</em></h2></div>
+          <p class="section-lede">Quick descriptions of places and traditions to help you choose what to explore.</p>
+        </div>
+        <div class="guide-items-grid">
+          <article class="guide-item">
+            <h3><span>Item:</span> Poctoy Beach</h3>
+            <p><strong>Category:</strong> Local Tourist Spot</p>
+            <p><strong>Description:</strong> Visit the beautiful white-sand beach in Torrijos, Marinduque, known for its clear waters and relaxing seaside views.</p>
+          </article>
+          <article class="guide-item">
+            <h3><span>Item:</span> Moriones Festival</h3>
+            <p><strong>Category:</strong> Cultural Festival</p>
+            <p><strong>Description:</strong> Experience Marinduque's famous Holy Week tradition of colorful Morion mask and community reenactments; check with local organizers for current schedules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="checklist-band" id="checklist" aria-labelledby="checklist-title">
+      <div class="container checklist-layout">
+        <div class="checklist-intro">
+          <p class="eyebrow eyebrow-light">Your island, your itinerary</p>
+          <h2 id="checklist-title">Places to <em>take with you.</em></h2>
+          <p>Keep a simple list of the stops you’re dreaming about. Your choices stay in this browser.</p>
+          <a class="checklist-link" href="#directory">Find another place <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="checklist-panel">
+          <div class="checklist-top"><h3>My places</h3><span class="list-count" id="list-count">0 saved</span></div>
+          <ul class="checklist-items" id="checklist-items"></ul>
+          <p class="checklist-empty" id="checklist-empty">Your list is waiting for its first island stop.</p>
+          <p class="storage-notice" id="storage-notice" role="status" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container heritage-section section-pad" id="heritage" aria-labelledby="heritage-title">
+      <div class="section-heading">
+        <div><p class="eyebrow eyebrow-dark">Traditions that bring us together</p><h2 id="heritage-title">Culture is part of <em>the journey.</em></h2></div>
+        <p class="section-lede">The island’s heritage is alive in its Holy Week streets, its welcome rituals, and the stories people pass along.</p>
+      </div>
+      <div class="heritage-grid">
+        <article class="heritage-feature">
+          <div class="heritage-illustration moriones-art" aria-hidden="true"><span class="sun-disc"></span><span class="mask-shape"><i></i><b></b><em></em></span><span class="festival-ribbon">HOLY WEEK · MARINDUQUE</span></div>
+          <div class="heritage-copy"><p class="eyebrow eyebrow-dark">A Lenten tradition</p><h3>The Moriones Festival</h3><p>During Holy Week, costumed <i>Moriones</i> wearing vivid Roman-centurion masks parade through communities in a dramatic retelling of the story of Longinus. The tradition is especially associated with Boac, Mogpog, and Gasan. Dates and activities vary by town each year; ask local organizers for the current program.</p><span class="heritage-detail">Observe respectfully · Ask before photographing people</span></div>
+        </article>
+        <div class="heritage-list">
+          <article class="heritage-note"><span class="note-number">01</span><div><h3>Boac’s hilltop church</h3><p>Visit the Immaculate Conception Cathedral and wander Boac’s old-town streets with care for active places of worship and community life.</p><span class="note-place">BOAC · HISTORIC LANDMARK</span></div></article>
+          <article class="heritage-note"><span class="note-number">02</span><div><h3>Welcome with a putong</h3><p><i>Putong</i> (also called <i>putungan</i>) is a Marinduque welcome ritual of song, a flower crown, and hospitality. It is shared on special occasions, not a performance on demand.</p><span class="note-place">ISLAND-WIDE · LIVING TRADITION</span></div></article>
+          <article class="heritage-note"><span class="note-number">03</span><div><h3>Remember Pulang Lupa</h3><p>The Battle of Pulang Lupa memorial in Torrijos honors a significant Filipino victory in the Philippine–American War and invites a moment of reflection.</p><span class="note-place">TORRIJOS · HISTORIC SITE</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="food-section section-pad" id="food" aria-labelledby="food-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow eyebrow-dark">Pull up a chair</p><h2 id="food-title">Good things from <em>the island table.</em></h2></div>
+          <p class="section-lede">Look for homegrown ingredients, small-batch treats, and local makers. Availability changes with season and community.</p>
+        </div>
+        <div class="food-grid">
+          <article class="food-card"><span class="food-icon" aria-hidden="true">✿</span><p class="food-origin">GASAN · LOCAL FAVORITE</p><h3>Uraro cookies</h3><p>Delicate, melt-in-your-mouth cookies made with arrowroot flour, a familiar island specialty.</p></article>
+          <article class="food-card"><span class="food-icon" aria-hidden="true">◉</span><p class="food-origin">ISLAND-WIDE · MARKET FINDS</p><h3>Arrowroot treats</h3><p>Find locally made arrowroot flour and baked goods at community markets and small producers.</p></article>
+          <article class="food-card"><span class="food-icon" aria-hidden="true">⌂</span><p class="food-origin">MARINDUQUEÑO HOME COOKING</p><h3>Fresh, shared, seasonal</h3><p>Ask what’s in season, follow the day’s catch, and let your host recommend a local meal.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container responsible-section section-pad" id="travel-well" aria-labelledby="responsible-title">
+      <div class="responsible-card">
+        <div class="responsible-heading"><p class="eyebrow eyebrow-dark">Leave the island lovely</p><h2 id="responsible-title">Travel gently. <em>Give back.</em></h2><p>Small choices help protect the places and traditions that make Marinduque special.</p></div>
+        <ul class="responsible-list">
+          <li><span aria-hidden="true">01</span>Bring a reusable bottle and take all your rubbish with you.</li>
+          <li><span aria-hidden="true">02</span>Respect reefs and wildlife: don’t touch, feed, or remove anything.</li>
+          <li><span aria-hidden="true">03</span>Ask permission before taking photos, especially during rituals.</li>
+          <li><span aria-hidden="true">04</span>Support local guides, eateries, makers, and community-run stays.</li>
+          <li><span aria-hidden="true">05</span>Check tides, weather, access, and local guidance before island trips.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">M</span><span>MARINDUQUE<span class="brand-dot">.</span><small>ISLAND GUIDE</small></span></a><p>A local-first guide to Marinduque, Philippines.</p><a href="#home">Back to top ↑</a></div>
+  </footer>
+
+  <dialog class="place-dialog" id="place-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close place details">×</button></form>
+    <div class="dialog-art" id="dialog-art" aria-hidden="true"></div>
+    <div class="dialog-content"><p class="eyebrow eyebrow-dark" id="dialog-town"></p><h2 id="dialog-title"></h2><span class="dialog-category" id="dialog-category"></span><p class="dialog-description" id="dialog-description"></p><p class="dialog-tip" id="dialog-tip"></p><button class="button button-green" type="button" id="dialog-add">Add to my places <span aria-hidden="true">＋</span></button></div>
+  </dialog>
+</body>
+</html>
